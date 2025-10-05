@@ -1,19 +1,21 @@
-# Ignore these files/folders for Vercel deployment
+# Keep frontend build inputs — DO NOT ignore package.json anywhere
+# Safe ignores:
+.git/
+.github/
+.vscode/
 node_modules/
+
+# Ignore backend from frontend deploys
+backend/
+
+# Local env files
+.env
+**/*.env
+
+# Optional docs/scripts you don’t need in the build
 *.md
-*.bat
 *.sh
+*.bat
 verify-setup.js
-package.json
-.gitignore
-COMPLETE_SETUP_GUIDE.md
-DEFAULT_VALUES_REMOVED.md
-DEPLOYMENT_GUIDE.md
-FINAL_README.md
-MEAL_RECOMMENDATIONS.md
-MONGODB_SETUP_GUIDE.md
-MONGODB_SETUP.md
-README.md
 start-dev.bat
 start-dev.sh
-vercel.json
