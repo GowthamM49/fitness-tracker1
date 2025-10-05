@@ -97,6 +97,6 @@ jspm_packages/
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-testnode_modules/
-
+frontend/build/
 backend/.env
 frontend/.env
