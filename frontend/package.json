@@ -21,6 +21,7 @@
     "web-vitals": "^2.1.4",
     "concurrently": "^8.2.2"
   },
+  "homepage": ".",
   "scripts": {
     "start": "react-scripts start",
     "dev": "react-scripts start",
