@@ -1,0 +1,19 @@
+# Ignore these files/folders for Vercel deployment
+node_modules/
+*.md
+*.bat
+*.sh
+verify-setup.js
+package.json
+.gitignore
+COMPLETE_SETUP_GUIDE.md
+DEFAULT_VALUES_REMOVED.md
+DEPLOYMENT_GUIDE.md
+FINAL_README.md
+MEAL_RECOMMENDATIONS.md
+MONGODB_SETUP_GUIDE.md
+MONGODB_SETUP.md
+README.md
+start-dev.bat
+start-dev.sh
+vercel.json
