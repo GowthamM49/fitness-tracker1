@@ -1,0 +1,38 @@
+services:
+  # Backend Service
+  - type: web
+    name: fitness-tracker-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://fitness5.vercel.app
+      - key: PORT
+        value: 10000
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+
+  # Frontend — deploy via Vercel (see frontend/.env.production)
+  # If deploying frontend on Render too:
+  - type: web
+    name: fitness-tracker-frontend
+    env: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://fitness-tracker-backend.onrender.com/api
+      - key: GENERATE_SOURCEMAP
+        value: false

@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: fitness-tracker-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        fromDatabase:
+          name: fitness-tracker-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_URL
+        value: https://fitness5.vercel.app
+      - key: PORT
+        value: 10000
+
+databases:
+  - name: fitness-tracker-db
+    plan: free

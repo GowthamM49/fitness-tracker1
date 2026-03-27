@@ -1,0 +1,39 @@
+{
+  "name": "fitness-tracker",
+  "version": "1.0.0",
+  "description": "KEC Fitness Tracker - A comprehensive health management platform",
+  "main": "index.js",
+  "scripts": {
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "start:frontend": "cd frontend && npm start",
+    "start:backend": "cd backend && npm start",
+    "dev:frontend": "cd frontend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "start": "npm run dev"
+  },
+  "keywords": [
+    "fitness",
+    "tracker",
+    "react",
+    "node.js",
+    "health",
+    "workout",
+    "diet"
+  ],
+  "author": "KEC Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ]
+}
