@@ -33,6 +33,6 @@ services:
     staticPublishPath: build
     envVars:
       - key: REACT_APP_API_URL
-        value: https://fitness-tracker-backend.onrender.com/api
+        value: https://fitness-tracker1-1-j5t2.onrender.com/api
       - key: GENERATE_SOURCEMAP
         value: false
